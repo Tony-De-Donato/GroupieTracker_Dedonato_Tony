@@ -2,18 +2,129 @@
 
 <body>
   {{template "header" .}}
-  <div>
-    <div>
-
-      <div>
-        <img src="{{ .Data.DisplayIcon}}">
-      </div>
-
-      <div>
-        <p>{{ .Data.DisplayName}}</p>
-        <p>{{ .Data.Description}}</p>
-      </div>
+  <div id="container">
+    <h1>{{.Data.DisplayName}}</h1>
+    <div id="img_container">
+      <img id="full_perso" onclick="background()" src="{{ .Data.FullPortrait}}">
     </div>
-  </div>
+
+    <div>
+      <h2>Description :</h2>
+      <p>{{ .Data.Description}}</p>
+    </div>
+
+    <div id="separateur">
+      <span class="sepa"></span>
+      <h2>STATS</h2>
+      <span class="sepa"></span>
+    </div>
+
+    <div style="width: 100%;">
+      <h2>Role :</h2>
+      <div style="display: flex;justify-content: space-evenly;align-items: center;width: 100%;">
+        <p style="font-size: xxx-large;">{{ .Data.Role.DisplayName}}</p>
+        <img id="role" src="{{ .Data.Role.DisplayIcon}}" alt="icon du role">
+      </div>
+      <p>{{ .Data.Role.Description}}</p>
+    </div>
+    
 </body>
+
+
+<style>
+  #role {
+    width: 30%;
+    height: auto;
+    
+  }
+
+  #separateur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    margin: 2vh 0;
+  }
+
+  .sepa {
+    width: 15vw;
+    height: 1vh;
+    background-color: rgb(208, 59, 59);
+    margin: 1vh;
+  }
+
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    max-width: 600px;
+    min-width: 350px;
+    width: 100vw;
+    background-color: #1e1e1e;
+    opacity: 0.95;
+    padding: 3vh;
+    margin-top: 5vh;
+    border-radius: 5vh;
+    z-index: 1;
+  }
+
+  #full_perso {
+    width: 150%;
+    height: auto;
+    border-radius: 3vh;
+    cursor: pointer;
+  }
+
+  #img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url("{{ .Data.Background}}");
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  h1 {
+    font-family: Tungsten Bold;
+    font-size: 15vh;
+    color: rgb(208, 59, 59);
+    border-bottom: 3px solid rgb(208, 59, 59);
+    margin: 0;
+    margin-bottom: 2vh;
+  }
+
+  h2 {
+    font-family: Tungsten Bold;
+    font-size: 6vh;
+    color: rgb(208, 59, 59);
+    margin: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  p {
+    font-family: DINNextDevanagariW05-Bold;
+    font-size: x-large;
+    color: rgb(225, 225, 225);
+    margin: 1.5vh;
+    margin-bottom: 2vh;
+  }
+</style>
+<script>
+  function background() {
+    if (document.getElementById("img_container").style.background != "none") {
+      document.getElementById("img_container").style.background = "none";
+    } else {
+      location.reload();
+    }
+
+  }
+
+</script>
 {{end}}

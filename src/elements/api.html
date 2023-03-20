@@ -1,16 +1,75 @@
 {{define "content"}}
+
 <body>
   {{template "header" .}}
-  <div >
+  <div id="recherche">
+    <p class="explication">
+      Entrez le nom d'un Agent, une lettre </br>
+      (ou appuyez juste sur confirmer pour la liste complète):
+    </p>
+
     <form method="post">
-      <input type="text" name="perso">
-      <input type="submit">
+      <input id="input" type="text" name="perso">
+      <input id="envoie" type="submit">
     </form>
-    {{if not .Data}}
-      <p >Recherche obsolète, essayez autre chose.</p>
-    {{else}}
-      {{template "liste-perso" .}}
-    {{end}}
+
   </div>
+  {{if not .Data}}
+  <p >Recherche obsolète, essayez autre chose.</p>
+  {{else}}
+  {{template "liste-perso" .}}
+  {{end}}
 </body>
+<style>
+
+.explication {
+    text-align: center;
+    font-size:xx-large;
+    font-family: DINNextDevanagariW05-Bold;
+  }
+
+  #input {
+    width: 40%;
+    height: 3em;
+    border-radius: 1em;
+    border: none;
+    background-color: #494949;
+    color: #ffffff;
+    font-size: x-large;
+    font-family: DINNextDevanagariW05-Bold;
+    padding-left: 1em;
+    margin-right: 2em;
+  }
+
+  #envoie {
+    width: 35%;
+    height: 3em;
+    border-radius: 1em;
+    border: none;
+    background-color: #6d0000;
+    color: #f4f4f4;
+    font-size: x-large;
+    font-family: DINNextDevanagariW05-Bold;
+    margin-top: 1em;
+  }
+
+
+  #recherche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+    width: 100vw;
+    max-width: 500px;
+    background-color: #1e1e1e;
+    opacity: 0.92;
+    margin-top: 5vh;
+    padding: 5vh;
+    padding-top: 3vh;
+    border-radius: 5vh;
+    color: #ffffff;
+    z-index: 1;
+  }
+</style>
 {{end}}
