@@ -11,6 +11,19 @@
 </body>
 
 <style>
+    @font-face {
+        font-family: "DINNextDevanagariW05-Bold";
+        src: url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.eot");
+        src: url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.woff") format("woff"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.ttf") format("truetype"),
+            url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.svg#DINNextDevanagariW05-Bold") format("svg");
+    }
+
+    @font-face {
+        font-family: "Tungsten Bold";
+        src: url("//db.onlinewebfonts.com/t/561f38b1f4570de0fb8a39d691ab058c.eot");
+        src: url("//db.onlinewebfonts.com/t/561f38b1f4570de0fb8a39d691ab058c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/561f38b1f4570de0fb8a39d691ab058c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/561f38b1f4570de0fb8a39d691ab058c.woff") format("woff"), url("//db.onlinewebfonts.com/t/561f38b1f4570de0fb8a39d691ab058c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/561f38b1f4570de0fb8a39d691ab058c.svg#Tungsten Bold") format("svg");
+    }
+
     body {
         padding-top: 12vh;
         margin: 0;
@@ -22,8 +35,10 @@
         background-position: top;
         background-attachment: fixed;
         display: flex;
-        justify-content: center;
-
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow-y: hidden;
     }
 </style>
 

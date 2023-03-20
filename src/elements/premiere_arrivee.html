@@ -1,24 +1,101 @@
 {{define "content"}}
+
 <body>
   {{template "header" .}}
-  <div id="landing_container">
-    <p >Projet Groupie Tracker</p>
-    <p >
-     bla bla bla
+  <div class="landing_container">
+    <p id="landing_title">PROJET GROUPIE TRACKER</p>
+    <p class="text_presentation">
+      Bienvenue sur mon site, ce dernier a été réalisé dans le cadre du projet "groupie tracker".</br> 
+      Il a pour but d'apprendre à utiliser une API.</br> 
+      Vous pouvez rechercher un agent en cliquant sur le bouton "COMMENCER" ci-dessous.</br> 
+      Vous pouvez également consulter le site officiel de valorant en cliquant sur "OFFICIAL WEBSITE".</br> 
+      Ou encore le site de l'api dont je me sers en cliquant sur "API UTILISEE".
     </p>
-    <a href="/api">START</a>
+
+  </div>
+  <div class="landing_container">
+    <p class="titre_presentation">
+      Comment utiliser les requètes ?</br>
+    </p>
+    <p class="text_presentation">
+      Pour utiliser les requètes, il vous suffit de cliquer sur le bouton "COMMENCER" ci-dessous.</br>
+      Ou bien sur le bouton "AGENT" dans le menu.</br> 
+      Vous serez redirigé vers une page où vous pourrez effectuer une recherche</br> 
+      Pour cela, il vous suffit de rentrer le nom de l'agent dans la barre et d'appuyer sur le bouton confirmer.</br></br>
+      Si vous ne connaissez pas les nom des agents, ne vous en faites pas.</br> 
+      Il suffit de taper une seul lettre et vous aurez la liste des agents dont les noms contiennent la lettre.</br></br>
+      Enfin, si vous n'entrez rien dans la barre de recherche, vous aurez la liste de tous les agents.</br>
+      
+    <a id="lancement" href="/api">COMMENCER</a>
+  </div>
 </body>
 <style>
-#landing_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: min-content;
-  width: 90vw;
-  background-color: #313131;
-  color: #dddddd;
-}
+
+  
+  .landing_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: min-content;
+    width: 80vw;
+    max-width: 800px;
+    background-color: #1e1e1e;
+    opacity: 0.92;
+    margin-top: 5vh;
+    padding: 5vh;
+    border-radius: 5vh;
+    color: #ffffff;
+    z-index: 1;
+  }
+  
+
+
+  #landing_title {
+    font-size: 5em;
+    font-family: Tungsten Bold;
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid #ffffff ;
+  }
+
+  #lancement {
+    font-size: 3em;
+    font-family: Tungsten Bold;
+    margin: 0;
+    padding: 10%;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 5vh;
+    margin-top: 3vh;
+    padding: 1vh 2vw;
+    background: #ac0000;
+    border: 1px solid #ffffff;
+  }
+  #lancement:hover {
+    background: linear-gradient(75deg, #c30000 0%, #ff6f00 100%);
+    border: 2px solid #ffffff;
+    scale: 1.1;
+    transition: 1s;
+  }
+  #lancement:not(:hover) {
+    transition: 1s;
+  }
+
+  .text_presentation {
+    font-size: 1.5em;
+    font-family: DINNextDevanagariW05-Bold;
+    margin: 0;
+    padding-top: 5vh;
+    text-align: center;
+  }
+  .titre_presentation {
+    font-size: 2.5em;
+    font-family: Tungsten Bold;
+    margin: 2vh;
+    padding:0;
+    border-bottom: 2px solid #ffffff ;
+  }
 </style>
 
 {{end}}

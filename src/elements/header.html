@@ -9,12 +9,7 @@
 </div>
 
 <style>
-  @font-face {
-    font-family: "DINNextDevanagariW05-Bold";
-    src: url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.eot");
-    src: url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.woff") format("woff"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.ttf") format("truetype"),
-      url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.svg#DINNextDevanagariW05-Bold") format("svg");
-  }
+ 
 
   #header {
     font-family: DINNextDevanagariW05-Bold;
@@ -30,6 +25,7 @@
     margin: 0;
     padding: 0;
     padding-right: 10vw;
+    z-index: 98;
   }
 
   #logo{
@@ -55,6 +51,14 @@
     transition: 1s;
   }
  .header_button:not(:hover) {
+    transition: 1s;
+  }
+
+  #logo:hover {
+    opacity: 0.6;
+    transition: 1s;
+  }
+  #logo:not(:hover) {
     transition: 1s;
   }
 </style>
