@@ -1,0 +1,19 @@
+{{define "content"}}
+
+<body>
+  {{template "header" .}}
+  <div>
+    <div>
+
+      <div>
+        <img src="{{ .Data.DisplayIcon}}">
+      </div>
+
+      <div>
+        <p>{{ .Data.DisplayName}}</p>
+        <p>{{ .Data.Description}}</p>
+      </div>
+    </div>
+  </div>
+</body>
+{{end}}

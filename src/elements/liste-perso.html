@@ -1,0 +1,14 @@
+{{define "liste-perso"}}
+<div>
+  {{ range .Data }}
+    <div >
+      <a href="http://localhost:80/perso?id={{.UUID}}" >
+        <div >
+          <img src="{{.DisplayIcon}}">
+        </div>
+        <p >{{.DisplayName}}</p>
+      </a>
+    </div>
+  {{end}}
+</div>
+{{end}}

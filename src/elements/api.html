@@ -1,0 +1,16 @@
+{{define "content"}}
+<body>
+  {{template "header" .}}
+  <div >
+    <form method="post">
+      <input type="text" name="perso">
+      <input type="submit">
+    </form>
+    {{if not .Data}}
+      <p >Recherche obsolète, essayez autre chose.</p>
+    {{else}}
+      {{template "liste-perso" .}}
+    {{end}}
+  </div>
+</body>
+{{end}}

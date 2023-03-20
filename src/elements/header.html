@@ -1,0 +1,61 @@
+{{define "header"}}
+<div id="header">
+
+  <a href="/" style="display: flex;justify-content: center;align-items: center;"><img id="logo" src="https://seeklogo.com/images/V/valorant-logo-FAB2CA0E55-seeklogo.com.png"
+      alt="logo"></a>
+  <a class="header_button" href="/api">AGENTS</a>
+  <a class="header_button" href="https://playvalorant.com/fr-fr/">OFFICIAL WEBSITE</a>
+  <a class="header_button" href="https://valorant-api.com/">API UTILISEE</a>
+</div>
+
+<style>
+  @font-face {
+    font-family: "DINNextDevanagariW05-Bold";
+    src: url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.eot");
+    src: url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.woff") format("woff"), url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.ttf") format("truetype"),
+      url("//db.onlinewebfonts.com/t/b1339a2ac36faa14e206d482e0063fc5.svg#DINNextDevanagariW05-Bold") format("svg");
+  }
+
+  #header {
+    font-family: DINNextDevanagariW05-Bold;
+    height: 12vh;
+    width: 90vw;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-right: 10vw;
+  }
+
+  #logo{
+    opacity: 0.8;
+    width: 12vh;
+    height: 12vh;
+  }
+
+  .header_button {
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+    font-size: 1.5em;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    border-radius: 20%;
+    padding: 0 1vw;
+  }
+  .header_button:hover {
+    background-color: #646464;
+    color: white;
+    z-index: 99;
+    transition: 1s;
+  }
+ .header_button:not(:hover) {
+    transition: 1s;
+  }
+</style>
+{{end}}
